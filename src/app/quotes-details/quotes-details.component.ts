@@ -16,9 +16,8 @@ export class QuotesDetailsComponent implements OnInit {
     this.isComplete.emit(complete);
   }
 
-
   constructor() {
-    this.votes = 0;
+    this.votes = this.votes || 0;
   }
   voteUp(): boolean {
     this.votes += 1;
@@ -32,4 +31,18 @@ export class QuotesDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+    
 }
+
+
+// constructor() {
+//   // this.votes = this.votes || 0;
+// }
+// voteUp(): boolean {
+//   this.votes += 1;
+//   return false;
+// }
+// voteDown(): boolean {
+//   this.votes -= 1;
+//   return false;
+// }

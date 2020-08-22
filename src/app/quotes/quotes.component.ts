@@ -8,10 +8,46 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-    new Quotes(1,'Iza Bro', 'Socrates, 1200 BC', 'submitted by Thomas', new Date(2020, 7, 21)),
-    new Quotes(2,'Waah saa utado?', 'Brayo wa TRM', 'submitted by Ian', new Date(2019, 4, 6)),
-    new Quotes(3,'We move regardless', 'CubeMovers, 2014', 'submitted by Abdul', new Date(2005, 5, 8)),
+    new Quotes(1,'Iza Bro', 'Socrates, 1200 BC', 'submitted by Thomas', new Date(2020, 7, 21),1),
+    new Quotes(2,'Waah saa utado?', 'Brayo wa TRM', 'submitted by Ian', new Date(2019, 4, 6),2),
+    new Quotes(3,'We move regardless', 'CubeMovers, 2014', 'submitted by Abdul', new Date(2005, 5, 8),3),
   ]
+  votes: number;
+
+  deleteQuote(isComplete, index){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
+
+  addNewQuotes(quotes){
+    let quoteLength = this.quotes.length;
+    quotes.id = quoteLength+1;
+    this.quotes.push(quotes)
+  }
+//new adds
+  // constructor() {
+  //   this.votes = this.votes || 0;
+  // }
+  // voteUp(): boolean {
+  //   this.votes += 1;
+  //   return false;
+  // }
+  // voteDown(): boolean {
+  //   this.votes -= 1;
+  //   return false;
+  // }
+  //end of new adds
+
+  sortedQuotes(): Quotes[]{
+    return this.quotes.sort((a: Quotes, b: Quotes) => b.votes-a.votes)
+  }
+  
+
+  ngOnInit(): void {
+   }
+
+}
 
 
 
@@ -25,21 +61,6 @@ export class QuotesComponent implements OnInit {
   //   {id:6,actualQuote:'Everyone can gerrit', description: 'CS Kagwe, 2020'},
   // ];
 
-  deleteQuote(isComplete, index){
-    if (isComplete) {
-      this.quotes.splice(index,1);
-    }
-  }
 
-  addNewQuotes(quotes){
-    let quoteLength = this.quotes.length;
-    quotes.id = quoteLength+1;
-    this.quotes.push(quotes)
-  }
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-
-}
