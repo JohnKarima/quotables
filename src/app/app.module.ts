@@ -13,7 +13,7 @@ import { QuotesFormComponent } from './quotes-form/quotes-form.component';
     AppComponent,
     QuotesComponent,
     QuotesDetailsComponent,
-    QuotesFormComponent
+    QuotesFormComponent,
   ],
   imports: [
     BrowserModule,

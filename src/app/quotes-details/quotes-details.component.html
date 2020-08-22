@@ -1,2 +1,31 @@
 <p>{{quotes.quoteAuthor}}<br>{{quotes.quoteSubmitter}}</p>
-<button (click)= 'quoteDelete(true)'>Delete Quote</button>
+
+
+
+
+
+
+<div class="ui statistic">
+  <div class="value">
+    {{ votes }}
+  </div>
+  <div class="label">
+    Points
+  </div>
+</div>
+
+<ul class="ui big horizontal list voters">
+  <li class="item">
+    <a href (click)="voteUp()">
+      <i class="arrow up icon"></i>
+      upvote
+    </a>
+  </li>
+  <li class="item">
+    <a href (click)="voteDown()">
+      <i class="arrow down icon"></i>
+      downvote
+    </a>
+  </li>
+</ul>
+<button (click)='quoteDelete(true)'>Delete Quote</button>
