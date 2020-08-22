@@ -4,7 +4,7 @@
   <ul>
     <div *ngFor='let quotes of quotes;let i = index'>
       <li>{{quotes.actualQuote}}</li>
-      <app-quotes-details *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete) = 'completeQuote($event,i)'></app-quotes-details>
+      <app-quotes-details *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete) = 'deleteQuote($event,i)'></app-quotes-details>
     </div>
   </ul>
   <app-quotes-form></app-quotes-form>

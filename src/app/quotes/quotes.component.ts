@@ -25,7 +25,7 @@ export class QuotesComponent implements OnInit {
   //   {id:6,actualQuote:'Everyone can gerrit', description: 'CS Kagwe, 2020'},
   // ];
 
-  completeQuote(isComplete, index){
+  deleteQuote(isComplete, index){
     if (isComplete) {
       this.quotes.splice(index,1);
     }
