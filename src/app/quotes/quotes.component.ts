@@ -8,9 +8,9 @@ import { Quotes } from '../quotes';
 })
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
-    new Quotes(1,'Iza Bro', 'Socrates, 1200 BC'),
-    new Quotes(2,'Waah saa utado?', 'Brayo wa TRM'),
-    new Quotes(3,'We move regardless', 'CubeMovers, 2014'),
+    new Quotes(1,'Iza Bro', 'Socrates, 1200 BC', 'submitted by Thomas'),
+    new Quotes(2,'Waah saa utado?', 'Brayo wa TRM', 'submitted by Ian'),
+    new Quotes(3,'We move regardless', 'CubeMovers, 2014', 'submitted by Abdul'),
   ]
 
 
