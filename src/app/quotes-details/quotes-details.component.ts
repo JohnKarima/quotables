@@ -29,7 +29,6 @@ export class QuotesDetailsComponent implements OnInit {
     return false;
   }
 
-
   ngOnInit() {
   }
 
