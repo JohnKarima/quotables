@@ -1,30 +1,49 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Quote</h2>
   <hr>
-  <form>
-      <div class="form-group">
+  <form #quotesForm='ngForm'>
+    <div class="form-group">
 
-          <label for="quote">Quote</label>
-          <textarea class="form-control" id="quote" rows="1" required></textarea>
-
+      <label for="quote">Quote</label>
+      <textarea class="form-control" id="actualQuote" [(ngModel)]="newQuotes.actualQuote" name="actualQuote" #actualQuote='ngModel'
+       rows="1" required></textarea>
+       <div [hidden]="actualQuote.valid || actualQuote.pristine" class="alert alert-danger">
+        <p>Quote is required</p>
       </div>
+       Display{{newQuotes.actualQuote}}
 
-      <div class="form-group">
 
-        <label for="author">Author</label>
-        <input type="text" required class="form-control" id="author">
+
+    </div>
+
+    <!-- <div class="form-group">
+
+      <label for="author">Author</label>
+      <input type="text" required class="form-control" id="author" [(ngModel)]="newQuotes.quoteAuthor" name="quoteAuthor" #quoteAuthor='ngModel'>
+
+      <div [hidden]="quoteAuthor.valid || quoteAuthor.pristine" class="alert alert-danger">
+        <p>Quote's Author is required</p>
+      </div>
+       Display{{newQuotes.quoteAuthor}}
 
     </div>
 
     <div class="form-group">
 
       <label for="submittedBy">Submitted by</label>
-      <input type="text" required class="form-control" id="submittedBy">
+      <input type="text" required class="form-control" id="submittedBy" [(ngModel)]="newQuotes.quoteSubmitter" name="quoteSubmitter" #quoteSubmitter='ngModel'>
 
-  </div>
+      <div [hidden]="quoteSubmitter.valid || quoteSubmitter.pristine" class="alert alert-danger">
+        <p>Who is submitting this quote?</p>
+      </div>
+       Display{{newQuotes.quoteSubmitter}}
 
-      
-      <!-- <div class="form-group">
+    </div> -->
+
+    <button type="submit" class="btn btn-success">Add Quote</button>
+
+
+    <!-- <div class="form-group">
 
           <label for="description">Description</label>
           <textarea class="form-control" id="description" rows="4" required></textarea>
