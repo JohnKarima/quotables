@@ -10,17 +10,16 @@ h1 {
 .dimmer {
   opacity: 0.88;
 }
-
 .gratuitous {
   font-size: 120%;
   font-style: italic;
 }
 body {
-    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.4)),url(src/assets/background1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: inherit;
-    background-attachment: fixed;
+  background-image: linear-gradient(rgba(0,0,0,0.1),rgb(0,0,0,0.4)),url(src/assets/background1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: inherit;
+  background-attachment: fixed;
 }
 li {
   font-family: georgia, sans-serif;

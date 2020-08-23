@@ -7,52 +7,30 @@
       <label for="actualQuote">Quote</label>
       <textarea class="form-control" id="actualQuote" [(ngModel)]="newQuotes.actualQuote" name="actualQuote" #actualQuote='ngModel'
        rows="1" required></textarea>
+
        <div [hidden]="actualQuote.valid || actualQuote.pristine" class="alert alert-danger">
         <p>Quote is required</p>
       </div>
-       <!-- Display{{newQuotes.actualQuote}} -->
-
-
-
     </div>
 
     <div class="form-group">
-
       <label for="author">Author</label>
       <input type="text" required class="form-control" id="author" [(ngModel)]="newQuotes.quoteAuthor" name="quoteAuthor" #quoteAuthor='ngModel'>
 
       <div [hidden]="quoteAuthor.valid || quoteAuthor.pristine" class="alert alert-danger">
         <p>Quote's Author is required</p>
       </div>
-       <!-- Display{{newQuotes.quoteAuthor}} -->
-
     </div>
 
     <div class="form-group">
-
       <label for="submittedBy">Submitted by</label>
       <input type="text" required class="form-control" id="submittedBy" [(ngModel)]="newQuotes.quoteSubmitter" name="quoteSubmitter" #quoteSubmitter='ngModel'>
 
       <div [hidden]="quoteSubmitter.valid || quoteSubmitter.pristine" class="alert alert-danger">
         <p>Who is submitting this quote?</p>
       </div>
-       <!-- Display{{newQuotes.quoteSubmitter}} -->
-
     </div>
 
     <button type="submit" class="btn btn-success text-center">Add Quote</button>
-
-
-    <!-- <div class="form-group">
-
-          <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="4" required></textarea>
-
-      </div>
-      <div class="form-group">
-          <label for="complete">Completion</label>
-          <input type='date' id="complete" required>
-
-      </div> -->
   </form>
 </div>
