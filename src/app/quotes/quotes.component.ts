@@ -9,33 +9,22 @@ import { Quotes } from '../quotes';
 export class QuotesComponent implements OnInit {
   quotes:Quotes[] = [
     new Quotes(1,'Iza Bro', 'Socrates, 1200 BC', 'submitted by Thomas', new Date(2020, 7, 21),-6),
-    new Quotes(2,'Waah saa utado?', 'Brayo wa TRM', 'submitted by Ian', new Date(2019, 4, 6),-2),
-    new Quotes(3,'We move regardless', 'CubeMovers, 2014', 'submitted by Abdul', new Date(2020, 7, 23),-3),
-    new Quotes(4,'Masilver mi huspin na mayeng', 'Masilver, 2017', 'submitted by Miracle Baby', new Date(2005, 5, 8),-4),
-    new Quotes(5,'I am a monument to all your sins', 'Gravemind, 2527', 'submitted by The Arbitrer', new Date(2020, 5, 8),-5),
-    new Quotes(6,'Everyone can gerrit', 'CS Kagwe, 2020', 'submitted by MoH', new Date(2020, 6, 8),-1),    
+    new Quotes(2,'Waah saa utado?', 'Brayo wa TRM', 'Submitted by Ian', new Date(2019, 4, 6),-2),
+    new Quotes(3,'We move regardless', 'CubeMovers, 2014', 'Submitted by Abdul', new Date(2020, 7, 23),-3),
+    new Quotes(4,'Masilver, mi huspin na mayeng', 'Masilver, 2017', 'Submitted by Miracle Baby', new Date(2005, 5, 8),-4),
+    new Quotes(5,'I am a monument to all your sins', 'Gravemind, 2527', 'Submitted by The Arbitrer', new Date(2020, 5, 8),-5),
+    new Quotes(6,'Everyone can gerrit', 'CS Kagwe, 2020', 'Submitted by MoH', new Date(2020, 6, 8),-1),    
   ]
   votes: number;
 
   deleteQuote(isComplete, index){
     if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].actualQuote}?`)
+      let toDelete = confirm(`Are you sure you want to delete the quote "${this.quotes[index].actualQuote}"?`)
       if (toDelete){
         this.quotes.splice(index,1)
       }
     }
   }
-
-
-
-  // deleteGoal(isComplete, index){
-  //   if (isComplete) {
-
-      
-  //   }
-  // }
-
-
 
 
 
