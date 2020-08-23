@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
   integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 <div class="quoteAuth">
-  {{quotes.quoteAuthor}}. {{quotes.quoteSubmitter}}
+  Source: {{quotes.quoteAuthor}}, {{quotes.quoteSubmitter}}
 </div><br>
 <div class="text-center">
   <div class="value">
@@ -14,37 +14,5 @@
     </a>
   </div>
 </div>
-<button type="button" class="btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button><br>
-<hr>
-
-<!-- <ul class="ui big horizontal list voters">
-  <li class="item">
-    <div class="clickable"></div>
-    <a class="blacken" href (click)="voteUp()">
-      <i class="fa fa-arrow-up"></i>
-    </a>
-  </li>
-  <li class="item">
-    <a class="blacken" href (click)="voteDown()">
-      <i class="fa fa-arrow-down"></i>
-    </a>
-  </li>
-</ul> -->
-
-
-
-<!-- <p>{{quotes.quoteAuthor}}<br>{{quotes.quoteSubmitter}}</p> -->
-<!-- {{ votes }} Points -->
-<!-- <div class="label">
-    Points
-  </div> -->
-  <!-- <div>
-  <a class="blacken" href (click)="voteUp()">
-    <i class="fa fa-arrow-up"></i>
-  </a>
-</div>
-<div>
-  <a class="blacken" href (click)="voteDown()">
-    <i class="fa fa-arrow-down"></i>
-  </a>
-</div><br> -->
+<button type="button" class="btn btn-danger float-right" (click)='quoteDelete(true)'>Delete Quote</button><br><br>
+<hr color="blue">

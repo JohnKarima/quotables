@@ -1,15 +1,25 @@
-.bolder{
+.bolder {
   font-weight: bold;
 }
 h1 {
   font-size: 350%;
 }
 
+.dimmer {
+  opacity: 0.8;
+
+}
+/* .ola{
+  background-color: blanchedalmond;
+  background-image: url(src/assets/stars.jpeg);
+} */
+
+
 body {
-    background-image: url("/src/assets/abstract.jpeg");
+    background-image: url(src/assets/background1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: inherit;
     background-attachment: fixed;
 }
 
@@ -18,7 +28,6 @@ li {
   font-size: 170%;
   text-align: center;
 }
-
-.timePublish{
+.timePublish {
   font-size: 140%;
 }
