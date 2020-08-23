@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+
 <p>{{quotes.quoteAuthor}}<br>{{quotes.quoteSubmitter}}</p>
 
 <div class="ui statistic">
@@ -9,18 +12,35 @@
   </div>
 </div>
 
-<ul class="ui big horizontal list voters">
+
+    <div>
+      <a class="blacken" href (click)="voteUp()">
+        <i class="fa fa-arrow-up"></i>
+        
+      </a>
+    </div>
+    <div>
+      <a class="blacken" href (click)="voteDown()">
+        <i class="fa fa-arrow-down"></i>
+      </a>
+    </div>
+    
+ 
+
+
+<button type="button" class= "btn btn-danger" (click)='quoteDelete(true)'>Delete Quote</button>
+
+
+<!-- <ul class="ui big horizontal list voters">
   <li class="item">
-    <a href (click)="voteUp()">
-      <i class="arrow up icon"></i>
-      upvote
+    <div class="clickable"></div>
+    <a class="blacken" href (click)="voteUp()">
+      <i class="fa fa-arrow-up"></i>
     </a>
   </li>
   <li class="item">
-    <a href (click)="voteDown()">
-      <i class="arrow down icon"></i>
-      downvote
+    <a class="blacken" href (click)="voteDown()">
+      <i class="fa fa-arrow-down"></i>
     </a>
   </li>
-</ul>
-<button (click)='quoteDelete(true)'>Delete Quote</button>
+</ul> -->

@@ -24,9 +24,9 @@ export class QuotesComponent implements OnInit {
   }
 
   addNewQuotes(quotes){
-    // let quoteLength = this.quotes.length;
-    // quotes.id = quoteLength+1;
-    this.quotes.unshift(quotes);
+    let quoteLength = this.quotes.length;
+    quotes.id = quoteLength+1;
+    this.quotes.push(quotes);
   }
 
   // upvoteFunc(index){

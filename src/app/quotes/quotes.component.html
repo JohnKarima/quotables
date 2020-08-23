@@ -1,11 +1,13 @@
+<body>
+  
 <div class="container">
-  <h1>My Quotes</h1>
+  <h1>Quotables</h1>
   <hr>
   <ul>
     <div class="row">
       <div class="col-md-8">
         <div *ngFor='let quotes of sortedQuotes(); let i = index'>
-          <li appHighlight>"{{quotes.actualQuote}}"  Time passed = {{quotes.createTime|timeCounter}} days since quote was published</li>
+          <li>"{{quotes.actualQuote}}"  Time passed = {{quotes.createTime|timeCounter}} days since quote was published</li>
           <app-quotes-details *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete)='deleteQuote($event,i)'>
           </app-quotes-details>   
           </div>
@@ -24,6 +26,7 @@
   
 </div>
 
+</body>
 
 <!-- <li appHighlight>{{quotes.actualQuote}} {{quotes.createTime}}</li> 
 
