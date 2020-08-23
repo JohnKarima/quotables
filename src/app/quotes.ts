@@ -3,9 +3,8 @@ export class Quotes {
   
   showDescription: boolean;
   // votes: any;
-  constructor(public id: number,public actualQuote: string,public quoteAuthor: string, public quoteSubmitter: string, public createTime: Date, public votes?: number){
+  constructor(public id: number,public actualQuote: string,public quoteAuthor: string, public quoteSubmitter: string, public createTime: Date, public votes: number){
     this.showDescription=true;
-    this.votes = votes || 0;
   }
 
 
@@ -20,9 +19,8 @@ export class Quotes {
     voteDown(): void {
       this.votes -= 1;
     }
-  // id: number;
-  // actualQuote: string;
-  // description: string;
+
+    
 }
 
 

@@ -1,21 +1,26 @@
-<div>
+<div class="container">
   <h1>My Quotes</h1>
   <hr>
   <ul>
-    <div *ngFor='let quotes of sortedQuotes(); let i = index'>
-      <li appHighlight>"{{quotes.actualQuote}}"  Time passed = {{quotes.createTime|timeCounter}} days since quote was published</li>
-      <app-quotes-details *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete)='deleteQuote($event,i)'>
-      </app-quotes-details>
-      
-      
+    <div class="row">
+      <div class="col-md-8">
+        <div *ngFor='let quotes of sortedQuotes(); let i = index'>
+          <li appHighlight>"{{quotes.actualQuote}}"  Time passed = {{quotes.createTime|timeCounter}} days since quote was published</li>
+          <app-quotes-details *ngIf='quotes.showDescription' [quotes]='quotes' (isComplete)='deleteQuote($event,i)'>
+          </app-quotes-details>   
+          </div>
+      </div>
+      <div class="col-md-4">
+        <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
 
       </div>
+    </div>
+    
       
   </ul>
   
   
-  <app-quotes-form (addQuotes)="addNewQuotes($event)"></app-quotes-form>
-
+  
   
 </div>
 
