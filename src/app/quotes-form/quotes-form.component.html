@@ -4,7 +4,7 @@
   <form (ngSubmit)='submitQuotes()' #quotesForm='ngForm'>
     <div class="form-group">
       
-      <label for="quote">Quote</label>
+      <label for="actualQuote">Quote</label>
       <textarea class="form-control" id="actualQuote" [(ngModel)]="newQuotes.actualQuote" name="actualQuote" #actualQuote='ngModel'
        rows="1" required></textarea>
        <div [hidden]="actualQuote.valid || actualQuote.pristine" class="alert alert-danger">
