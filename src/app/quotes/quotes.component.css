@@ -4,16 +4,9 @@
 h1 {
   font-size: 350%;
 }
-
 .dimmer {
   opacity: 0.8;
-
 }
-/* .ola{
-  background-color: blanchedalmond;
-  background-image: url(src/assets/stars.jpeg);
-} */
-
 
 body {
     background-image: url(src/assets/background1.jpg);
@@ -22,7 +15,6 @@ body {
     background-position: inherit;
     background-attachment: fixed;
 }
-
 li {
   font-family: georgia, sans-serif;
   font-size: 170%;
