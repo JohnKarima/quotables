@@ -39,6 +39,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 - HTML, CSS, JavaScript, Bootstrap & TypeScript
 
+## Link to Live Project
+
+- https://johnkarima.github.io/quotables/
+
+## Contact Information
+
+- karimajohn24@gmail.com
+
 ## License Copyright 
 
 - 2020, John Karima.
